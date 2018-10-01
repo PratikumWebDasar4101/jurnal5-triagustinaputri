@@ -1,5 +1,4 @@
 <?php
-	if(isset($_POST['submit'])){
 		$nim = $_POST['nim'];
 		$nama = $_POST['nama'];
 		$email = $_POST['email'];
@@ -11,7 +10,7 @@
 			echo $reinput;
 			echo $enter;
 		}
-		 if(is_numeric($nim) || strlen((string)$nim) > 10){
+		 if(!is_numeric($nim) || strlen((string)$nim) > 10){
 		 	echo " nim harus berjumlah 10 karakter";
 		 	echo $reinput;
 		 	echo $enter;
@@ -23,5 +22,5 @@
 		 }else{
 		 	header("location: komentar.php");
 		 }
-}
+
 ?>
